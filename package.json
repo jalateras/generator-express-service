@@ -1,0 +1,37 @@
+{
+  "name": "generator-express-service",
+  "version": "0.0.1",
+  "description": "A yo generator for standard express server",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/jalateras/generator-express-service",
+  "bugs": "https://github.com/jalateras/generator-express-service/issues",
+  "author": {
+    "name": "Jim Alateras",
+    "email": "jima@comware.com.au",
+    "url": "https://github.com/jalateras"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jalateras/generator-express-service.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.12.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.10.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
