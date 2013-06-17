@@ -40,13 +40,18 @@ ExpressServiceGenerator.prototype.askFor = function askFor() {
 
 ExpressServiceGenerator.prototype.app = function app() {
   this.mkdir('server');
+  this.mkdir('server/config');
+  this.mkdir('server/etc');
   this.mkdir('server/resources');
 
   this.template('server/_app.js', 'app.js');
   this.template('server/_index.js', 'index.js');
 
   this.copy('server/api.js', 'server/api.js');
+  this.copy('server/etc/default-config.js', 'server/etc/default-config.js');
   this.directory('server/resources', 'server/resources');
+
+  this.template('server/config/_config.js', 'server/config/config.js');
 
   this.directory('test', 'test');
 };

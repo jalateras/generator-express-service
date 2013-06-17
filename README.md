@@ -26,6 +26,8 @@ The generated application includes
 * testing framework `mocha`
 * code coverage `istanbul`
 * build tool `grunt`
+* configuration `nconf`
+
 
 
 

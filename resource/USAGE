@@ -1,0 +1,8 @@
+Description:
+    Creates a new Express Resource
+
+Example:
+    yo express-service:resource resourceName  [resourcePath]
+
+    This will create:
+        server/resources/<resourceName>-resource.js
