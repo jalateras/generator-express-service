@@ -6,8 +6,10 @@
 var _ = require('lodash');
 
 module.exports = function(app) {
+  //#START-ROUTES
   require('./resources/logger-resource')(app);
   require('./resources/version-resource')(app);
+  //#END-ROUTES
 
   app.get('/api', function(req, res) {
     res.json(200, getApi(app));

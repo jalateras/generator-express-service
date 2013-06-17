@@ -32,7 +32,7 @@ describe("exercise version resource api", function() {
   });
 
   describe("exercise /", function() {
-    describe("when we issue a GET to /", function() {
+    describe("when we issue a get to /", function() {
       var statusCode;
       var versionInfo;
 

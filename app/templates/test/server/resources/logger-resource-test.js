@@ -31,7 +31,7 @@ describe("exercise logger resource api", function() {
   });
 
   describe("exercise /logger", function() {
-    describe("when we issue a GET to /logger", function() {
+    describe("when we exercise the get apir", function() {
       var statusCode;
       var loggerInfo;
 
@@ -56,7 +56,7 @@ describe("exercise logger resource api", function() {
       });
     });
 
-    describe("when we issue a POST to /logger", function() {
+    describe("when we exercise the post api", function() {
       var statusCode;
 
       before(function(done) {
@@ -75,7 +75,7 @@ describe("exercise logger resource api", function() {
       });
     });
 
-    describe("when we issue a DEL to /logger", function() {
+    describe("when we exercise the delete api", function() {
       var statusCode;
 
       before(function(done) {
@@ -94,7 +94,7 @@ describe("exercise logger resource api", function() {
       });
     });
 
-    describe("when we issue a PUT to /logger", function() {
+    describe("when we exercise the put api", function() {
       var statusCode;
 
       before(function(done) {
@@ -115,7 +115,7 @@ describe("exercise logger resource api", function() {
   });
 
   describe("exercise /logger/:logLevel", function() {
-    describe("when we issue a PUT to /logger/INFO", function() {
+    describe("when we exercise the put api", function() {
       var statusCode;
 
       before(function(done) {
@@ -136,7 +136,7 @@ describe("exercise logger resource api", function() {
       });
     });
 
-    describe("when we issue a GET to /logger/info", function() {
+    describe("when we exercise the get api", function() {
       var statusCode;
       var responseBody;
 
@@ -161,7 +161,7 @@ describe("exercise logger resource api", function() {
       });
     });
 
-    describe("when we issue a POST to /logger/debug", function() {
+    describe("when we exercise the post api using /logger/debug", function() {
       var statusCode;
 
       before(function(done) {
@@ -180,7 +180,7 @@ describe("exercise logger resource api", function() {
       });
     });
 
-    describe("when we issue a DEL to /logger/info", function() {
+    describe("when we exercise the delete api using /logger/info", function() {
       var statusCode;
 
       before(function(done) {
@@ -201,7 +201,7 @@ describe("exercise logger resource api", function() {
   });
 
   describe("exercise /logger/:category/:logLevel", function() {
-    describe("when we issue a PUT to /logger/server/INFO", function() {
+    describe("when we exervicse the put api using /logger/server/INFO", function() {
       var statusCode;
       var logCategory;
 
@@ -228,7 +228,7 @@ describe("exercise logger resource api", function() {
       });
     });
 
-    describe("when we issue a GET to /logger/server/info", function() {
+    describe("when we exercise the get api using /logger/server/info", function() {
       var statusCode;
 
       before(function(done) {
@@ -266,7 +266,7 @@ describe("exercise logger resource api", function() {
       });
     });
 
-    describe("when we issue a DEL to /logger/server/info", function() {
+    describe("when we exercise the delete api using /logger/server/info", function() {
       var statusCode;
 
       before(function(done) {
