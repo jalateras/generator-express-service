@@ -31,4 +31,4 @@ describe("exercise <%= _.slugify(name) %> resource api", function() {
     done();
   });
 
-}); //#END-TEST-RESOURCE
+ }); //#END-TEST-RESOURCE
