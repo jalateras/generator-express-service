@@ -1,6 +1,6 @@
 {
   "name": "generator-express-service",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A yo generator for standard express server",
   "keywords": [
     "yeoman-generator"
