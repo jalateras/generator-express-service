@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       options : {
         type : 'lcov',
         dir : REPORT_DIR,
-        print : 'summary'
+        print : 'text-summary,html'
       }
     },
 
