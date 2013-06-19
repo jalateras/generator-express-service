@@ -1,6 +1,7 @@
 'use strict';
 var util = require('util');
 var path = require('path');
+var _ = require('lodash');
 var yeoman = require('yeoman-generator');
 
 
@@ -28,7 +29,8 @@ ExpressServiceGenerator.prototype.askFor = function askFor() {
 
   var prompts = [{
     name: 'serviceName',
-    message: 'What is the name of the service?'
+    message: 'What is the name of the service?',
+    default: _.last(process.cwd().split(path.sep))
   }];
 
   this.prompt(prompts, function (props) {
