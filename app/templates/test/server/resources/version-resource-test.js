@@ -5,14 +5,9 @@ var request = require('request');
 var http = require('http');
 var should = require('should');
 var libpath = process.env.TEST_COVERAGE ? '../../../build/instrument' : '../../..';
-var app = rewire(libpath + '/app');
-
-// kill url logging
-app.__set__(
-  'urlLogger', {
-    'info': function() {}
-  }
-);
+var app = require('express')();
+var authenticated = require('../helper/authenticated-helper');
+var testResource = rewire(libpath + '/server/resources/version-resource')(app, authenticated);
 
 describe("exercise version resource api", function() {
   var baseUrl;

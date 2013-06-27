@@ -4,12 +4,14 @@
  * @param app
  */
 var _ = require('lodash');
+var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
 module.exports = function(app) {
   //#START-ROUTES
-  require('./resources/logger-resource')(app);
-  require('./resources/version-resource')(app);
-  //#END-ROUTES
+  require('./resources/logger-resource')(app, ensureLoggedIn);
+  require('./resources/version-resource')(app, ensureLoggedIn);
+  require('./resources/passport-authorization-resource')(app);
+//#END-ROUTES
 
   app.get('/api', function(req, res) {
     res.json(200, getApi(app));

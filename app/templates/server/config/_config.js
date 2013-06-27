@@ -1,3 +1,5 @@
+var path = require('path');
+var fs = require('fs');
 var nconf = require('nconf');
 
 module.exports = (function() {
@@ -12,8 +14,26 @@ module.exports = (function() {
     return nconf.get(key);
   };
 
+  var getSSLPrivateKey = function() {
+    var privateKeyLocation = getConfig('SSL_PRIVATE_KEY');
+    if (!privateKeyLocation) {
+      privateKeyLocation = path.join(__dirname, '../sslcert/server.key');
+    }
+
+    return fs.readFileSync(privateKeyLocation).toString();
+  };
+
+  var getSSLCertificate = function() {
+    var certificateLocation = getConfig('SSL_CERTIFICATE');
+    if (!certificateLocation) {
+      certificateLocation = path.join(__dirname, '../sslcert/server.crt');
+    }
+  };
+
   return {
-    get: getConfig
+    get: getConfig,
+    getSSLPrivateKey: getSSLPrivateKey,
+    getSSLCertificate: getSSLCertificate
   };
 })();
 

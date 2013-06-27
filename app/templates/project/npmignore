@@ -1,0 +1,9 @@
+.idea
+build
+test
+node_modules
+tmp
+npm-debug.log
+tenant.backup
+*.tgz
+

@@ -44,6 +44,11 @@ This command will ask a number of questions including the resource path name and
 * update server/api.js to include the new resource in its routes
 
 
+## Notes
+
+This currently does not work with 0.10.X due to some incompatible modules. Will rectify this shortly
+
+
 
 
 

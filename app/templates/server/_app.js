@@ -1,6 +1,5 @@
 var express = require('express');
-var path = require('path');
-var util = require('util');
+var passport = require('passport');
 var log4js = require('log4js');
 var urlLogger = log4js.getLogger('url');
 
@@ -14,6 +13,11 @@ app.configure(function () {
   app.use(express.json());
   app.use(express.urlencoded());
   app.use(express.methodOverride());
+  app.use(express.cookieParser());
+  app.use(express.session({ secret: 'keyboard secret' }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(app.router);
   app.use(express.logger({
     format: ':remote-addr ":method :url" :status :res[content-length] :response-time',
     stream: {
