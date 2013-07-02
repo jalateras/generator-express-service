@@ -30,10 +30,20 @@ module.exports = (function() {
     }
   };
 
+  var isAuthenticationEnabled = function() {
+    var authEnabled = getConfig('AUTHENTICATION_ENABLED');
+    if (authEnabled && authEnabled === false) {
+      return false;
+    }
+
+    return true;
+  };
+
   return {
     get: getConfig,
     getSSLPrivateKey: getSSLPrivateKey,
-    getSSLCertificate: getSSLCertificate
+    getSSLCertificate: getSSLCertificate,
+    isAuthenticationEnabled: isAuthenticationEnabled
   };
 })();
 

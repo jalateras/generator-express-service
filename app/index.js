@@ -46,6 +46,7 @@ ExpressServiceGenerator.prototype.app = function app() {
   this.mkdir('server/etc');
   this.mkdir('server/resources');
   this.mkdir('server/sslcert');
+  this.mkdir('server/security');
   this.mkdir('test');
 
   this.template('server/_app.js', 'app.js');
@@ -55,6 +56,7 @@ ExpressServiceGenerator.prototype.app = function app() {
   this.copy('server/etc/default-config.js', 'server/etc/default-config.js');
   this.directory('server/resources', 'server/resources');
   this.directory('server/sslcert', 'server/sslcert');
+  this.directory('server/security', 'server/security');
 
   this.template('server/config/_config.js', 'server/config/config.js');
 

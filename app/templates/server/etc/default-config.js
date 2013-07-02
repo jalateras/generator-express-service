@@ -1,3 +1,4 @@
 module.exports = {
-  SSL_ENABLED: false
+  SSL_ENABLED: false,
+  AUTHENTICATION_ENABLED: false
 };
