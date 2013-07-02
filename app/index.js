@@ -46,6 +46,7 @@ ExpressServiceGenerator.prototype.app = function app() {
   this.mkdir('server/etc');
   this.mkdir('server/resources');
   this.mkdir('server/sslcert');
+  this.mkdir('test');
 
   this.template('server/_app.js', 'app.js');
   this.template('server/_index.js', 'index.js');

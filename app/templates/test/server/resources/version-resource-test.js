@@ -9,6 +9,11 @@ var app = require('express')();
 var authenticated = require('../helper/authenticated-helper');
 var testResource = rewire(libpath + '/server/resources/version-resource')(app, authenticated);
 
+// mock out
+app.serverStats = {
+  startTime: new Date()
+};
+
 describe("exercise version resource api", function() {
   var baseUrl;
   var httpServer;
